@@ -1,21 +1,30 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Level : MonoBehaviour
 {
+    // Parameters
     [SerializeField] int breakableBlocks;
-    [SerializeField] string nextScene;
 
-    private void Update()
+    // Cached reference
+    SceneLoader sceneLoader;
+
+    private void Start()
     {
-        if(breakableBlocks == 0)
-        {
-            SceneManager.LoadScene(nextScene);
-        }
+        sceneLoader = FindObjectOfType<SceneLoader>();
     }
 
     public void CountBreakableBlocks()
     {
         breakableBlocks++;
+    }
+
+    public void BlockDestroyed()
+    {
+        breakableBlocks--;
+
+        if(breakableBlocks <= 0)
+        {
+            sceneLoader.LoadNextScene();
+        }
     }
 }
