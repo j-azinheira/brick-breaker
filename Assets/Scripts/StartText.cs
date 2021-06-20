@@ -18,7 +18,7 @@ public class StartText : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            gameObject.active = false;
+            gameObject.SetActive(true);
         }
     }
 }

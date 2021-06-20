@@ -3,9 +3,16 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+
+    GameSession gameStatus;
+
     public void LoadStartScene()
     {
         SceneManager.LoadScene(0);
+
+        //gameStatus.ResetGameStatus();
+
+        FindObjectOfType<GameSession>().ResetGameStatus();
     }
 
     public void LoadNextScene()
@@ -24,7 +31,7 @@ public class SceneLoader : MonoBehaviour
     {
         if(Input.GetKey("escape"))
         {
-            Application.Quit();
+            LoadStartScene();
         }
     }
 }
