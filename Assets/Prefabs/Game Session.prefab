@@ -82,11 +82,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1760128478, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -573.9916
+      value: -423.89
       objectReference: {fileID: 0}
     - target: {fileID: 1760128478, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 441.55426
+      value: 338
       objectReference: {fileID: 0}
     - target: {fileID: 1760128479, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
       propertyPath: scoreText
