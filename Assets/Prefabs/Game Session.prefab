@@ -47,6 +47,7 @@ MonoBehaviour:
   gameSpeed: 1
   pointsPerBlockDestroyed: 100
   scoreText: {fileID: 5349485841918728069}
+  isAutoPlayEnabled: 0
   gameScore: 0
 --- !u!1001 &5349485841245108837
 PrefabInstance:
@@ -55,6 +56,94 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5833608247576403672}
     m_Modifications:
+    - target: {fileID: 1760128478, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760128478, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760128478, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760128478, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760128478, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 289.77698
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760128478, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 195.6177
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760128478, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -573.9916
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760128478, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 441.55426
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760128479, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 5349485841918728069}
+    - target: {fileID: 5349485841269339248, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349485841269339248, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349485841269339248, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349485841269339248, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -329
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349485841269339248, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349485841269339255, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349485841269339255, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
+      propertyPath: m_margin.w
+      value: -211.38611
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349485841269339255, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
+      propertyPath: m_margin.x
+      value: 367.10986
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349485841269339255, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
+      propertyPath: m_margin.y
+      value: -188.63321
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349485841269339255, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
+      propertyPath: m_margin.z
+      value: 420.0012
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349485841269339255, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349485841269339255, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349485841269339255, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5349485842537029545, guid: 0234ef3ca136543438ea9e9f327bf8c2, type: 3}
       propertyPath: m_Pivot.x
       value: 0
