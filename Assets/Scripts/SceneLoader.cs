@@ -4,15 +4,21 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
 
-    GameSession gameStatus;
+    GameSession gameSession;
+
+    private void Awake()
+    {
+        gameSession = FindObjectOfType<GameSession>();
+    }
 
     public void LoadStartScene()
     {
         SceneManager.LoadScene(0);
-
-        //gameStatus.ResetGameStatus();
-
-        FindObjectOfType<GameSession>().ResetGameStatus();
+        
+        if(gameSession != null)
+        {
+            gameSession.ResetGameStatus();
+        }
     }
 
     public void LoadNextScene()
@@ -29,7 +35,27 @@ public class SceneLoader : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKey("escape"))
+        Navigate();
+    }
+
+    private void Navigate()
+    {
+        if (Input.GetKey(KeyCode.Alpha1))
+        {
+            LoadNextScene();
+        }
+
+        if (Input.GetKey(KeyCode.Alpha2))
+        {
+            QuitGame();
+        }
+
+        if (Input.GetKey(KeyCode.C))
+        {
+            SceneManager.LoadScene("Credits");
+        }
+
+        if (Input.GetKey(KeyCode.Escape))
         {
             LoadStartScene();
         }
