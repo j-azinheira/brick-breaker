@@ -10,7 +10,7 @@ public class GameSession : MonoBehaviour
     [SerializeField] bool isAutoPlayEnabled;
 
     // State variables
-    [SerializeField] int gameScore = 0;
+    public int gameScore = 0;
 
     private void Awake()
     {
