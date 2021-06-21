@@ -636,7 +636,10 @@ MonoBehaviour:
   m_text: '1 - Start!
 
 
-    2 - Quit :(
+    2 - Tutorial
+
+
+    3 - Quit :(
 
 
     C - Credits'

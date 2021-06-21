@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Level : MonoBehaviour
 {
@@ -7,10 +8,13 @@ public class Level : MonoBehaviour
 
     // Cached reference
     SceneLoader sceneLoader;
+    Scene currentScene;
 
     private void Start()
     {
         sceneLoader = FindObjectOfType<SceneLoader>();
+
+        Scene currentScene = SceneManager.GetActiveScene();
     }
 
     public void CountBlocks()
@@ -22,7 +26,7 @@ public class Level : MonoBehaviour
     {
         breakableBlocks--;
 
-        if(breakableBlocks <= 0)
+        if(currentScene.name == "Tutorial" && breakableBlocks <= 0)
         {
             sceneLoader.LoadNextScene();
         }

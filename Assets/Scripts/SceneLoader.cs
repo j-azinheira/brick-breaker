@@ -47,6 +47,11 @@ public class SceneLoader : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Alpha2))
         {
+            SceneManager.LoadScene("Tutorial");
+        }
+
+        if (Input.GetKey(KeyCode.Alpha3))
+        {
             QuitGame();
         }
 

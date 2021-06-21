@@ -1,5 +1,7 @@
 using System;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Block : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class Block : MonoBehaviour
     // Cached reference
     Level level;
     GameSession gameStatus;
+    TextMeshProUGUI[] tutorialText;
 
     // State variables
     [SerializeField] int timesBlockHit = 0; // Serialized for debugging
@@ -19,6 +22,8 @@ public class Block : MonoBehaviour
     private void Start()
     {
         CountBreakableBlocks();
+
+        tutorialText = FindObjectsOfType<TextMeshProUGUI>();
     }
 
     private void CountBreakableBlocks()
@@ -67,6 +72,13 @@ public class Block : MonoBehaviour
 
     private void DestroyBlock()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        if(currentScene.name == "Tutorial")
+        {
+            TutorialLogic();
+        }
+
         TriggerSparklesVFX();
 
         AudioSource.PlayClipAtPoint(blockBreakSound, Camera.main.transform.position);
@@ -83,5 +95,16 @@ public class Block : MonoBehaviour
         GameObject sparkles = Instantiate(blockSparklesVFX, transform.position, transform.rotation);
 
         Destroy(sparkles, 1f);
+    }
+
+    private void TutorialLogic()
+    {
+        foreach(var text in tutorialText)
+        {
+            if(gameObject.name == "1-Hit Block")
+            {
+                text.SetText("trap");
+            }
+        }
     }
 }
