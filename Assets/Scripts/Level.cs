@@ -26,7 +26,7 @@ public class Level : MonoBehaviour
     {
         breakableBlocks--;
 
-        if(currentScene.name == "Tutorial" && breakableBlocks <= 0)
+        if(breakableBlocks <= 0)
         {
             sceneLoader.LoadNextScene();
         }
